@@ -1,40 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@athielking
-github /
-gitignore
-Public
-
-Code
-Pull requests 235
-Actions
-Security
-
-    Insights
-
-gitignore/Terraform.gitignore
-@bdougie
-bdougie Merge pull request #3965 from imomaliev/patch-1
-Latest commit c0ca848 on Feb 10
-History
-16 contributors
-@tlindsay42
-@jkodroff
-@bdougie
-@kevincloud
-@loozhengyuan
-@nguyendviet
-@pei-lun
-@imomaliev
-@iapain
-@hantuzun
-@Icreatedthistodeletemyaccounts
-@shiftkey
-34 lines (27 sloc) 884 Bytes
 # Local .terraform directories
 **/.terraform/*
 
@@ -69,19 +32,3 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
-
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-Loading complete
