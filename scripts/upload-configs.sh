@@ -9,7 +9,7 @@ for worker in $(az vm list -g "Kubernetes" -d --query "[? contains(name, 'worker
 
     ssh-keyscan -H -p $port ${KUBERNETES_PUBLIC_ADDRESS} >> ~/.ssh/known_hosts
 
-    scp -P $port ca.pem ${name}-key.pem ${name}.pem adminuser@${KUBERNETES_PUBLIC_ADDRESS}:~/
+    scp -P $port ${name}.kubeconfig kube-proxy.kubeconfig adminuser@${KUBERNETES_PUBLIC_ADDRESS}:~/
   done
 
 for controller in $(az vm list -g "Kubernetes" -d --query "[? contains(name, 'controller')].{name: name, ip: privateIps}" | jq -c '.[]');
@@ -20,5 +20,5 @@ for controller in $(az vm list -g "Kubernetes" -d --query "[? contains(name, 'co
 
     ssh-keyscan -H -p $port ${KUBERNETES_PUBLIC_ADDRESS} >> ~/.ssh/known_hosts
 
-    scp -P $port service-account-key.pem service-account.pem adminuser@${KUBERNETES_PUBLIC_ADDRESS}:~/
+    scp -P $port admin.kubeconfig kube-controller-manager.kubeconfig kube-scheduler.kubeconfig adminuser@${KUBERNETES_PUBLIC_ADDRESS}:~/
   done
